@@ -21,7 +21,8 @@
   "homepage": "https://github.com/dstineback/KOA-CRUD#readme",
   "dependencies": {
     "koa": "^1.2.0",
-    "koa-route": "^2.4.2"
+    "koa-route": "^2.4.2",
+    "koa-router": "^5.4.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
