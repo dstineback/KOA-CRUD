@@ -4,7 +4,7 @@ README.md
 
 #### Developers:
 * __Chris Perez__
-* __Dan Stinebeck__
+* __Dan Stineback__
 * __Kevin Chuang__
 
 ## Koa Framework
