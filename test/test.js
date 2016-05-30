@@ -16,7 +16,6 @@ const server = require(__dirname + '/../lib/server');
 
 describe('Testing router', () => {
   it('should test our router', () => {
-    console.log(router.stack[0].methods);
     expect(router.stack[0].methods[1]).to.eql('GET');
     expect(router.stack[1].methods[0]).to.eql('POST');
     expect(router.stack[2].methods[0]).to.eql('PUT');
