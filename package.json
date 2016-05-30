@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dstineback/KOA-CRUD#readme",
   "dependencies": {
     "koa": "^1.2.0",
+    "koa-bodyparser": "^2.2.0",
     "koa-router": "^5.4.0"
   },
   "devDependencies": {
