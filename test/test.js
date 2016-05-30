@@ -16,10 +16,11 @@ const server = require(__dirname + '/../lib/server');
 
 describe('Testing router', () => {
   it('should test our router', () => {
-    expect(router.routes).to.have.property('GET');
-    expect(router.routes).to.have.property('POST');
-    expect(router.routes).to.have.property('PUT');
-    expect(router.routes).to.have.property('DELETE');
+    console.log(router.stack[0].methods);
+    expect(router.stack[0].methods[1]).to.eql('GET');
+    expect(router.stack[1].methods[0]).to.eql('POST');
+    expect(router.stack[2].methods[0]).to.eql('PUT');
+    expect(router.stack[3].methods[0]).to.eql('DELETE');
   });
   it('should respond with 404 to bad path', () => {
     request('localhost:7777')
