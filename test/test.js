@@ -30,13 +30,13 @@ describe('Testing router', () => {
       expect(res.text).to.eql('Not Found');
     });
   });
-  it('should return a message', (done) => {
+  it('should return an array', (done) => {
     request('localhost:7777')
     .get('/')
     .end((err, res) => {
       expect(err).to.eql(null);
       expect(res).to.have.status(200);
-      expect(res.text).to.eql('Response from GET');
+      expect(Array.isArray(res.body)).to.be.true;
       done();
     });
   });
@@ -47,7 +47,7 @@ describe('Testing router', () => {
     .end((err, res) => {
       expect(err).to.eql(null);
       expect(res).to.have.status(200);
-      expect(res.text).to.eql('Response from POST');
+      expect(res.text).to.eql('Posted');
       done();
     });
   });
@@ -58,7 +58,7 @@ describe('Testing router', () => {
     .end((err, res) => {
       expect(err).to.eql(null);
       expect(res).to.have.status(200);
-      expect(res.text).to.eql('Response from PUT');
+      expect(res.text).to.eql('Updated');
       done();
     });
   });
@@ -68,7 +68,7 @@ describe('Testing router', () => {
     .end((err, res) =>{
       expect(err).to.eql(null);
       expect(res).to.have.status(200);
-      expect(res.text).to.eql('Response from DELETE');
+      expect(res.text).to.eql('Deleted');
       done();
     });
   });
