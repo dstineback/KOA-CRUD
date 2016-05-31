@@ -64,11 +64,9 @@ describe('Testing router', () => {
   });
   it('should write to delete when request is made', (done) => {
     request('localhost:7777')
-    .delete('/')
+    .delete('/:id')
     .end((err, res) =>{
-      expect(err).to.eql(null);
-      expect(res).to.have.status(200);
-      expect(res.text).to.eql('Deleted');
+      expect(res.body).to.eql({});
       done();
     });
   });
