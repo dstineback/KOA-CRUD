@@ -41,4 +41,6 @@ app.use(router.routes());
 
 since routes() is the function that lets the server know what to do when the specific CRUD route is requested.
 
+Another key point to note is that, because Koa does not have built-in or default modules for things like body parsing and routing, it helps to know which helper modules will best serve your needs before beginning your project. There are many similarly named packages with varying levels of effectiveness and clarity. We determined that 'koa-body' was a better body parser than 'koa-body-parser' or 'koa-bodyparser', and that 'koa-router' was better than 'koa-route.'
+
 Other than these new concepts, everything else was similar enough to get a server up and running very easily.
